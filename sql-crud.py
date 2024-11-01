@@ -95,10 +95,13 @@ jamie_mcstay = Programmer(
 # session.add(margaret_hamilton)
 # session.add(bill_gates)
 # session.add(tim_berners_lee)
-session.add(jamie_mcstay)
+# session.add(jamie_mcstay)
+
+programmer = session.query(Programmer).filter_by(id=19).first()
+programmer.famous_for = "World President"
 
 # commit our session to the database
-# session.commit()
+session.commit()
 
 
 # query the database to find all Programmers
